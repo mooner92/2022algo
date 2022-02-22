@@ -18,7 +18,7 @@ int main(){
         if (ex1[i] == ' ')
         spacecount++;
 
-        cout << spacecount << "\n";
+        
     }
 
     cout << spacecount+1;
