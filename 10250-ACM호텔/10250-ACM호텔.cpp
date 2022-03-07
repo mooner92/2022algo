@@ -5,14 +5,16 @@ int main(){
     int tc;
     cin >> tc;
     for(int i=0;i<tc;i++){
-        int row,col,g,lay,add;
-        cin >>row>>col>>g;
-        if(g%row==0){
-            lay = 100*g;
+        int a,b,c,room=0;
+        cin>>a>>b>>c;
+        if(c%a==0){
+            room+=(a*100);  //100의자리 정하기
+            room+=(c/a);
         }
-        else if(g%row!=0){
-            lay = 100*(g%row);
+        else if(c%a!=0){
+            room+=((c%a)*100);   //100의자리 정하기
+            room+=((c/a)+1);
         }
-        
+        cout <<room<<endl;
     }
 }
