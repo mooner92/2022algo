@@ -16,4 +16,7 @@ int main(){
     int k =a;
     int c = sqrt(a);
     cout << k <<"\n" <<c;*/
+    int a;
+    cin>>a;
+    cout << a*2;
 }
