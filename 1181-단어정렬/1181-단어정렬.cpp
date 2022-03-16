@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 //두 문자열이 같은경우를 생각하자
 int main(){

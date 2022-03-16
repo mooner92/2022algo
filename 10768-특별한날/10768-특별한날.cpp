@@ -20,4 +20,5 @@ int main(){
     if(a<2){
         cout<<"Before";
     }
+    
 }
