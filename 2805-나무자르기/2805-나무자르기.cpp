@@ -14,7 +14,7 @@ int main(){
     sort(k.begin(),k.end());
     while(1){
         int half = k.size()/2;  //바이너리서치의 피봇
-        if(k[half]
+        if(k[half]);
     }
     
 
