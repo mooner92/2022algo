@@ -4,7 +4,9 @@ using namespace std;
 int main(){
     int tc;
     cin>>tc;
-    for(int i=0;i<tc;i++){
-        
+    stack<int> s;
+    for(int i=1;i<=tc;){
+        s.push(i);
+
     }
 }
