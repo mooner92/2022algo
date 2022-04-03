@@ -42,3 +42,26 @@ int main() {
     ans = parametric(1, mx+1);
     cout<<ans<<"\n";
 }
+
+/*
+
+이미 있는 랜선 K 개 :
+1 <= K <= 10,000
+
+필요한 랜선 N 개 :
+1 <= N <= 1,000,000
+    
+@@@@ 풀이방법 @@@@
+
+parametric search
+
+binary search 해서 나온 값으로
+check
+- 통과 시 left
+- 탈락 시 right
+
+@@@@@@@@@@@@@@@
+
+해 : N 개를 만들 수 있는 랜선의 최대 길이
+
+*/
