@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-int main(){
+int main()
+{
     int ts;
-    cin>>ts;
+    cin >> ts;
 }
