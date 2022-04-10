@@ -22,7 +22,7 @@ cout << a*2;
 }
 */
 
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 int gcd(int a, int b)
@@ -61,4 +61,23 @@ int main()
     r2 = lcm(x, y);
     cout << r1 << endl
          << r2;
+}
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int cl[] = {500, 100, 50, 10};
+    scanf("%d", &n);
+    int cnt = 0;
+    for (int i = 0; n != 0; i++)
+    {
+        int pivot = n / cl[i];
+        cnt += pivot;
+        printf("%d원 동전의 개수 = %d\n", cl[i], pivot);
+        n %= cl[i];
+    }
+    printf("총 동전의 개수 = %d", cnt);
 }
