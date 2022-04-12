@@ -64,11 +64,11 @@ int main()
 }
 */
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
-    int n;
+    int n,m;
     int cl[] = {500, 100, 50, 10};
     scanf("%d", &n);
     int cnt = 0;
@@ -81,3 +81,4 @@ int main()
     }
     printf("총 동전의 개수 = %d", cnt);
 }
+*/
