@@ -71,16 +71,10 @@ void solution(const ulli n, const ulli diskNum, const ulli move)
 
 int main()
 {
-    int tc = 0;
-    cin >> tc;
-    while (tc--)
-    {
-        int n;
-        ulli k;
-        cin >> n >> k;
-        ulli diskNum = disk_num(k);
-        ulli moveCount = move_count(k, diskNum);
-        solution(n, diskNum, moveCount);
-    }
-    return 0;
+    int n;
+    ulli k;
+    cin >> n >> k;
+    ulli diskNum = disk_num(k);
+    ulli moveCount = move_count(k, diskNum);
+    solution(n, diskNum, moveCount);
 }
