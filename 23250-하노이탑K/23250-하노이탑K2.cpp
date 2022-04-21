@@ -78,4 +78,3 @@ int main()
     ulli moveCount = move_count(k, diskNum);
     solution(n, diskNum, moveCount);
 }
-/**/
