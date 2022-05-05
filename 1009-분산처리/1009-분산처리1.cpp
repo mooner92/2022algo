@@ -64,9 +64,7 @@ int main()
 
         else if (q == 0)
             cout << 10 << "\n";
-        else
-            continue;
-    }
+        }
 }
 
 /*
