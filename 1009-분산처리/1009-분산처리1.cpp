@@ -28,14 +28,14 @@ int main()
                 (q == 2) ? k = 8 : (q == 3) ? k = 7
                                : (q == 7)   ? k = 3
                                : (q == 8)   ? k = 2
-                                            : k = 0;
+                                            : k = 2;
                 cout << k << "\n";
             }
             else if (t == 0)
             {
                 int j;
                 (q == 2 || 1 == 8) ? j = 6 : (q == 3 || q == 7) ? j = 1
-                                                                : j = 0;
+                                                                : j = 1;
                 cout << j << "\n";
             }
         }
@@ -65,7 +65,7 @@ int main()
         else if (q == 0)
             cout << 10 << "\n";
         else
-            break;
+            continue;
     }
 }
 
