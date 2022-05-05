@@ -7,7 +7,7 @@ int main()
     for (int i = 0; i < tc; i++)
     {
         int q, w;
-        cin >> q, w;
+        cin >> q >> w;
         q %= 10;
         // cout << q << endl;
         if (q == 2 || q == 3 || q == 7 || q == 8)
@@ -39,23 +39,33 @@ int main()
                 cout << j << "\n";
             }
         }
-        else if (q == 1 || q == 5 || q == 6 || q == 10)
+        else if (q == 1 || q == 5 || q == 6)
         {
             cout << q << "\n";
         }
-        else if (q == 4)
+        else if (q == 4 || q == 9)
         {
-            int k;
-            (w % 2 == 1) ? k = 4 : k = 6;
-            cout << k << "\n";
+            int t = w % 2;
+            if (t == 1)
+            {
+                if (q == 4)
+                    cout << 4 << "\n";
+                else if (q == 9)
+                    cout << 9 << "\n";
+            }
+            else if (t == 0)
+            {
+                if (q == 4)
+                    cout << 6 << "\n";
+                else if (q == 9)
+                    cout << 1 << "\n";
+            }
         }
-        else if (q == 9)
-        {
-            int k;
-            (w == 1) ? k = 9 : (w % 2 == 1) ? k = 2
-                                            : k = 8;
-            cout << k << "\n";
-        }
+
+        else if (q == 0)
+            cout << 10 << "\n";
+        else
+            break;
     }
 }
 
