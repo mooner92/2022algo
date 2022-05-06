@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int fibo(int n)
+long long fibo(int n)
 {
-    if (n == 1)
-        return 1;
-    else
-        return fibo(n - 1) + n;
+    long long j = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        j += i;
+    }
+    return j;
 }
 
 int main()
@@ -34,6 +36,11 @@ int main()
         }
         else
             dummy = (m - n);
-        cout << fibo(dummy + 1) << "\n";
+        long long k = 0;
+        for (int i = dummy; i <= m; i++)
+        {
+            k += fibo(i);
+        }
+        cout << k << "\n";
     }
 }
