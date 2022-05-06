@@ -15,7 +15,7 @@ int main()
             cout << 1 << "\n";
             continue;
         }
-        if (n < (m - n))
+        if (n > (m - n))
         {
             dummy = n;
         }
