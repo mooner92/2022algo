@@ -28,5 +28,4 @@ int main()
         ll g = fact(m) / fact(dummy) * fact(m - dummy);
         cout << g << "\n";
     }
-    /**/
 }
