@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 int main()
 {
@@ -28,6 +27,11 @@ int main()
                     ans += 1;
                     i += 2;
                 } /**/
+                else
+                {
+                    ans += 2;
+                    i++;
+                }
             }
             else if (s[i + 1] == '-')
             {
