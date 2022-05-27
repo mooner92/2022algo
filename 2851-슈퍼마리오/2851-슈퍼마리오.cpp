@@ -12,7 +12,7 @@ int main()
     for (int j = 0; j < 10; j++)
     {
         sum2 += s[j];
-        if (s[j] >= 100)
+        if (sum2 >= 100)
         {
             sum1 = sum2 - s[j];
             break;
