@@ -19,7 +19,7 @@ int main()
         }
     }
     int ans = 0;
-    if (abs(100 - sum1) > (sum2 - 100))
+    if (abs(100 - sum1) >= (sum2 - 100))
     {
         ans = sum2;
     }
