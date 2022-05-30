@@ -2,15 +2,11 @@
 #include <vector>
 using namespace std;
 
-int heightP = 0;
-int widthP = 0;
-int search4x4(vector<string> v1, int i1, int j1, int n1, int m1)
+int search4x4(vector<string> v1, int i1, int j1)
 {
     // width,height
     int cnt = 0;
-    int hpv = 0;
-    int wpv = 0;
-    int crowd = 0;
+
     for (int i = 0; i < 4; i++)
     {
         // case1 width
@@ -21,7 +17,6 @@ int search4x4(vector<string> v1, int i1, int j1, int n1, int m1)
                     if (v1[i1 + i][j1 + 3] == 'P' || v1[i1 + i][j1 + 3] == 'J')
                     {
                         cnt++;
-                        wpv++;
                         // cout << "width1\n";
                     }
         }
@@ -32,7 +27,6 @@ int search4x4(vector<string> v1, int i1, int j1, int n1, int m1)
                     if (v1[i1 + i][j1 + 3] == 'E' || v1[i1 + i][j1 + 3] == 'I')
                     {
                         cnt++;
-                        wpv++;
                         // cout << "width2\n";
                     }
         }
@@ -46,7 +40,6 @@ int search4x4(vector<string> v1, int i1, int j1, int n1, int m1)
                     {
                         cnt++;
                         // cout << "height1\n";
-                        hpv++;
                     }
         }
         else if (v1[i1][j1 + i] == 'P' || v1[i1][j1 + i] == 'J')
@@ -57,7 +50,6 @@ int search4x4(vector<string> v1, int i1, int j1, int n1, int m1)
                     {
                         cnt++;
                         // cout << "height2\n";
-                        hpv++;
                     }
         }
     }
@@ -107,17 +99,6 @@ int search4x4(vector<string> v1, int i1, int j1, int n1, int m1)
                 }
     }
 
-    if (i1 != 0 || j1 != 0)
-    {
-        if ((widthP - 1) != 0 && (heightP - 1) != 0)
-            cnt -= ((wpv - (widthP - 1)) + (hpv - (heightP - 1)));
-    }
-
-    widthP = 0;
-    heightP = 0;
-    widthP += hpv;
-    heightP += wpv;
-
     return cnt;
 }
 
@@ -137,7 +118,7 @@ int main()
     {
         for (int j = 0; j <= (m - 4); j++)
         { //가로세로 :-4까지 비교 == 전체 칸 비교
-            ans += search4x4(v, i, j, n, m);
+            ans += search4x4(v, i, j);
         }
     }
     cout << ans;
