@@ -39,5 +39,12 @@ int main()
 
 int searchStar(vector<string> v1, int n1, int m1)
 {
+
     return 0;
+}
+
+string reverseStr(string x)
+{
+    reverse(x.begin(), x.end());
+    return x;
 }
