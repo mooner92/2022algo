@@ -114,10 +114,10 @@ int main()
         cin >> a;
         v.push_back(a);
     }
-    for (int i = 0; i <= (n - 4); i++)
+    for (int i = 0; i <= (n - 4); i++) // y축이동
     {
-        for (int j = 0; j <= (m - 4); j++)
-        { //가로세로 :-4까지 비교 == 전체 칸 비교
+        for (int j = 0; j <= (m - 4); j++) // x축이동
+        {                                  //가로세로 :-4까지 비교 == 전체 칸 비교
             ans += search4x4(v, i, j);
         }
     }
