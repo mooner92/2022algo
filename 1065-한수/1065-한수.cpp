@@ -7,17 +7,16 @@ int searchAns(int h)
     for (int i = 1; i <= h; i++)
     { // 1~h까지 반복
         if (i < 100)
-        {
             cnt++;
-        }
         else if (i >= 100 && i < 1000)
         {
             int a, b, c;
-            c = i % 10;
-            i /= 10;
-            b = i % 10;
-            i /= 10;
-            a = i;
+            int i1 = i;
+            c = i1 % 10;
+            i1 /= 10;
+            b = i1 % 10;
+            i1 /= 10;
+            a = i1;
             if (a == b && b == c)
                 cnt++;
             else if (a + c == b * 2)
