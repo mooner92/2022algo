@@ -16,6 +16,6 @@ int search(int s)
             s /= 3;
             cnt++;
         }
-        else if ()
+        // else if ()
     }
 }
