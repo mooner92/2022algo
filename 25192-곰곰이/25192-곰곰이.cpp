@@ -13,6 +13,6 @@ int main()
         cin >> dummy1;
         if (dummy1 == "ENTER")
         {
-                }
-    }
+        }
+    } /**/
 }
