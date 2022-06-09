@@ -10,9 +10,8 @@ bool findI(vector<string> s1, string str)
         {
             return false;
         }
-        else
-            return true;
     }
+    return true;
 }
 
 int main()
@@ -36,9 +35,7 @@ int main()
         else
         {
             if (findI(s, dummy1))
-            {
-                cnt++;
-            }
+                cnt++; // dummy1이 s에 없을 때  cnt++
             s.push_back(dummy1);
             p++;
         }
