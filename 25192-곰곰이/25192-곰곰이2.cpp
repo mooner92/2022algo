@@ -12,6 +12,6 @@ int main()
     {
         string a;
         cin >> a;
-        s.push_back(a); /**/
+        s.push_back(a);
     }
 }
