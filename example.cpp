@@ -79,6 +79,6 @@ int main()
         printf("%d원 동전의 개수 = %d\n", cl[i], pivot);
         n %= cl[i];
     }
-    printf("총 동전의 개수 = %d", cnt);/**/
+    printf("총 동전의 개수 = %d", cnt);
 }
-* /
+*/
