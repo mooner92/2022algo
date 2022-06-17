@@ -80,4 +80,4 @@ int main()
         n %= cl[i];
     }
     printf("총 동전의 개수 = %d", cnt);
-}/**/
+}
