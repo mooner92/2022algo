@@ -21,6 +21,10 @@ int main()
         hash[s[0] - 97].push_back(s);
     }
     int k;
+    for (int i = 0; i < 26; i++)
+    {
+        sort(hash[i].begin(), hash[i].end());
+    }
     for (int i = 0; i < m; i++)
     {
         cin >> s;
