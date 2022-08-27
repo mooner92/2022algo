@@ -1,6 +1,27 @@
 {
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch ex123",
+            "request": "launch",
+            "mainClass": "ex123",
+            "projectName": "2022algo_9f6fe011"
+        },
+        {
+            "type": "java",
+            "name": "Launch main2309",
+            "request": "launch",
+            "mainClass": "main2309",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": ""
+        },
+        {
             "name": "C/C++: clang++ 활성 파일 빌드 및 디버그",
             "type": "cppdbg",
             "request": "launch",
