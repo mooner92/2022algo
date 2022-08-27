@@ -34,4 +34,4 @@ int main()
             s1.push_back(s);
         }
     }
-} /**/
+}
