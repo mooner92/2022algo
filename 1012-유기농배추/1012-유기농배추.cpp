@@ -58,4 +58,4 @@ int main()
         memset(v1, 0, sizeof(v1));
         memset(visited, 0, sizeof(visited));
     }
-}
+} /**/
