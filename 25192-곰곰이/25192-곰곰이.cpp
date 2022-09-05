@@ -42,3 +42,7 @@ int main()
     }
     cout << cnt;
 }
+
+/*
+#if
+*/
