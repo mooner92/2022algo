@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <cmath>
 using namespace std;
 int main()
@@ -16,9 +15,9 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         cin >> r >> g >> b;
-        rgb[i][p1] = min(rgb[i - 1][0] + g, rgb[i - 1][0] + b);
-        rgb[i][p2] = min(rgb[i - 1][1] + r, rgb[i - 1][1] + b);
-        rgb[i][p3] = min(rgb[i - 1][2] + r, rgb[i - 1][2] + g);
+        rgb[i][p1] = min(rgb[i - 1][1], rgb[i - 1][2]) + r;
+        rgb[i][p2] = min(rgb[i - 1][0], rgb[i - 1][2]) + g;
+        rgb[i][p3] = min(rgb[i - 1][0], rgb[i - 1][1]) + b;
     }
     cout << min(min(rgb[n][0], rgb[n][1]), rgb[n][2]);
 }
