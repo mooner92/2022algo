@@ -1,61 +1,62 @@
 #include <iostream>
 #include <vector>
-#include <cmath>
 using namespace std;
 
 const int arrow[8] = {
     -1,
     0,
     0,
-    -1,
+    1,
     1,
     0,
     0,
-    1
-}; //0,1 = 상   2,3 = 좌    4,5 = 하    6,7 = 우
-bool visited[101][101];
-int ds[101][101];
+    -1
+}; //0,1 = 상   2,3 = 우    4,5 = 하    6,7 = 좌
+bool visited[102][102];
+int ds[102][102];
 int n, m;
 int cnt = 0;
-int dist[2];
-int dfs(int k, int l)
+int dist=INT_MAX;
+int dfs(int k, int l)  //종착지에 도착했거나 visited가 1인경우 널리턴
 {
     cnt++;
     if (k == n && l == m)
     {
-        if(dist[0]){
-            dist[1] = cnt;
-        }
-        else
-        dist[1] = cnt;
+        cnt < dist ? dist = cnt : 0;
 
         cnt = 0;
             return 0;
     }
+
+    else if(!visited[k][l]){ //wrong_path에서 true로 바꿔놓은 visited때문에 right_path의 진입이 막히는 상황(?) X
+        visited[k][l] = 1;
+    }
+    /*
     else if(!ds[k][l])
         return 0;  //1인것만 dfs하면 이 조건은 필요 X
-    else
-    {
+    */
         for (int i = 0; i < 4;i++){
-            if(ds[k+arrow[2*i]][l+arrow[(2*i)+1]]){  //상하좌우 계산
-                return dfs(k+arrow[2*i],l+arrow[(2*i)+1]);
+            if(ds[k+arrow[2*i]][l+arrow[(2*i)+1]] && !visited[k + arrow[2 * i]][l + arrow[(2 * i) + 1]]){  //상하좌우 계산 , 방문하려는 visited가 false일 때 실행
+                //visited[k + arrow[2 * i]][l + arrow[(2 * i) + 1]] = 1;
+                return dfs(k + arrow[2 * i], l + arrow[(2 * i) + 1]);
             }
         }
-    }
+        return 0;
 }
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
+    char c;
     cin >> n >> m;
-    for (int i = 0; i < n;i++){
-        for (int j = 0; j < m;j++){
-            cin >> ds[i][j];
+    for (int i = 1; i <= n;i++){
+        for (int j = 1; j <= m;j++){
+            cin >> c;
+            ds[i][j] = c - 48;
         }
     }
-    dfs(0, 0);
-    cout << min(dist[0], dist[1]);
+    dfs(1, 1);
+    cout << dist;
 }
 
 /*
