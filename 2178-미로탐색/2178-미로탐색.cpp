@@ -13,8 +13,8 @@ const int arrow[8] = {
     0,
     -1
 }; //0,1 = 상   2,3 = 우    4,5 = 하    6,7 = 좌
-bool visited[102][102];
-int ds[102][102];
+bool visited[102][102] = {0,};
+int ds[102][102] = {0,};
 int n, m;
 int cnt = 0;
 int dist=INT_MAX;
@@ -23,7 +23,7 @@ int dfs(int k, int l)  //종착지에 도착했거나 visited가 1인경우 널�
     cnt++;
     if (k == n && l == m)
     {
-        cnt < dist ? dist = cnt : 0;
+        cnt < dist ? (dist = cnt) : 0;
 
         cnt = 0;
             return 0;
