@@ -85,4 +85,3 @@ public:
         container[now / 2] = pivot;
     }
 };
-//
