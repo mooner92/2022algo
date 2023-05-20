@@ -33,4 +33,4 @@ int main()
         sum += min;
     }
     printf("\n%d", sum);
-}
+} /////////
