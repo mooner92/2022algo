@@ -1,6 +1,6 @@
 --(1) 새로운 도서('스포츠 세계', '대한미디어', 10,000원)가 마당서점에 입고되었다. 삽입이 안 될 때 필요한 데이터가 더 있는지 찾아보시오.
 INSERT INTO BOOKS (
-    TITLE,
+    BOOK_ID,
     PUBLISHER,
     PRICE
 ) VALUES (
