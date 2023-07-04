@@ -44,4 +44,3 @@ int main()
         check(s);
     }
 }
-/////
