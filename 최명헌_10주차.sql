@@ -39,3 +39,5 @@ WHERE
     '') != ''
 ORDER BY
     ANIMAL_ID ASC;
+
+--
