@@ -1,3 +1,147 @@
+-- 매장유형 테이블
+CREATE TABLE 매장유형 (
+    매장유형ID INT PRIMARY KEY,
+    매장유형명 VARCHAR(50)
+);
+
+-- 매장 테이블
+CREATE TABLE 매장 (
+    매장ID INT PRIMARY KEY,
+    매장명 VARCHAR(50),
+    지역 VARCHAR(50),
+    매장유형ID INT,
+    FOREIGN KEY (매장유형ID) REFERENCES 매장유형(매장유형ID)
+);
+
+-- 재료 테이블
+CREATE TABLE 재료 (
+    재료ID INT PRIMARY KEY,
+    재료명 VARCHAR(50)
+);
+
+-- 메뉴 테이블
+CREATE TABLE 메뉴 (
+    메뉴ID INT PRIMARY KEY,
+    메뉴명 VARCHAR(50),
+    가격 INT,
+    재료ID INT,
+    FOREIGN KEY (재료ID) REFERENCES 재료(재료ID)
+);
+
+-- 고객 테이블
+CREATE TABLE 고객 (
+    고객ID INT PRIMARY KEY,
+    고객명 VARCHAR(50),
+    연락처 VARCHAR(50)
+);
+
+-- 주문 테이블
+CREATE TABLE 주문 (
+    주문ID INT PRIMARY KEY,
+    매장ID INT,
+    고객ID INT,
+    주문일자 DATE,
+    FOREIGN KEY (매장ID) REFERENCES 매장(매장ID),
+    FOREIGN KEY (고객ID) REFERENCES 고객(고객ID)
+);
+
+-- 주문상세 테이블
+CREATE TABLE 주문상세 (
+    주문상세ID INT PRIMARY KEY,
+    주문ID INT,
+    메뉴ID INT,
+    수량 INT,
+    FOREIGN KEY (주문ID) REFERENCES 주문(주문ID),
+    FOREIGN KEY (메뉴ID) REFERENCES 메뉴(메뉴ID)
+);
+
+-- 원두 테이블
+CREATE TABLE 원두 (
+    원두ID INT PRIMARY KEY,
+    원두명 VARCHAR(50),
+    재료ID INT,
+    FOREIGN KEY (재료ID) REFERENCES 재료(재료ID)
+);
+
+-- 우유 테이블
+CREATE TABLE 우유 (
+    우유ID INT PRIMARY KEY,
+    우유명 VARCHAR(50),
+    재료ID INT,
+    FOREIGN KEY (재료ID) REFERENCES 재료(재료ID)
+);
+
+-- 시럽 테이블
+CREATE TABLE 시럽 (
+    시럽ID INT PRIMARY KEY,
+    시럽명 VARCHAR(50),
+    재료ID INT,
+    FOREIGN KEY (재료ID) REFERENCES 재료(재료ID)
+);
+
+-- 매장-메뉴 테이블
+CREATE TABLE 매장_메뉴 (
+    매장ID INT,
+    메뉴ID INT,
+    PRIMARY KEY (매장ID, 메뉴ID),
+    FOREIGN KEY (매장ID) REFERENCES 매장(매장ID),
+    FOREIGN KEY (메뉴ID) REFERENCES 메뉴(메뉴ID)
+);
+
+-- 매장-고객 테이블
+CREATE TABLE 매장_고객 (
+    매장ID INT,
+    고객ID INT,
+    PRIMARY KEY (매장ID, 고객ID),
+    FOREIGN KEY (매장ID) REFERENCES 매장(매장ID),
+    FOREIGN KEY (고객ID) REFERENCES 고객(고객ID)
+);
+
+-- 주문-주문상세 테이블
+CREATE TABLE 주문_주문상세 (
+    주문ID INT,
+    주문상세ID INT,
+    PRIMARY KEY (주문ID, 주문상세ID),
+    FOREIGN KEY (주문ID) REFERENCES 주문(주문ID),
+    FOREIGN KEY (주문상세ID) REFERENCES 주문상세(주문상세ID)
+);
+
+-- 메뉴-주문상세 테이블
+CREATE TABLE 메뉴_주문상세 (
+    메뉴ID INT,
+    주문상세ID INT,
+    PRIMARY KEY (메뉴ID, 주문상세ID),
+    FOREIGN KEY (메뉴ID) REFERENCES 메뉴(메뉴ID),
+    FOREIGN KEY (주문상세ID) REFERENCES 주문상세(주문상세ID)
+);
+
+-- 원두-재료 테이블
+CREATE TABLE 원두_재료 (
+    원두ID INT,
+    재료ID INT,
+    PRIMARY KEY (원두ID, 재료ID),
+    FOREIGN KEY (원두ID) REFERENCES 원두(원두ID),
+    FOREIGN KEY (재료ID) REFERENCES 재료(재료ID)
+);
+
+-- 우유-재료 테이블
+CREATE TABLE 우유_재료 (
+    우유ID INT,
+    재료ID INT,
+    PRIMARY KEY (우유ID, 재료ID),
+    FOREIGN KEY (우유ID) REFERENCES 우유(우유ID),
+    FOREIGN KEY (재료ID) REFERENCES 재료(재료ID)
+);
+
+-- 시럽-재료 테이블
+CREATE TABLE 시럽_재료 (
+    시럽ID INT,
+    재료ID INT,
+    PRIMARY KEY (시럽ID, 재료ID),
+    FOREIGN KEY (시럽ID) REFERENCES 시럽(시럽ID),
+    FOREIGN KEY (재료ID) REFERENCES 재료(재료ID)
+);
+
 -- 매장유형 테이블 INSERT
 INSERT INTO 매장유형 VALUES (
     1,
