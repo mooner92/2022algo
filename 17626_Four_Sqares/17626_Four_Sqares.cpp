@@ -30,4 +30,4 @@ int main()
     cout << min_square_sum(n) << "\n";
 
     return 0;
-} //
+}
