@@ -71,4 +71,3 @@ int main(void)
 
     cout << result << '\n';
 }
-///
