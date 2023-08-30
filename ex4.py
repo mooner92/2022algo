@@ -48,3 +48,5 @@ if __name__ == '__main__': rviz = RVIZ_AR() rviz.listener()
 r = rospy.Rate(10) rviz.time = time.time()
 while not rospy.is_shutdown(): r.sleep()
 queue_size=1)
+
+###
