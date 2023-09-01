@@ -22,7 +22,6 @@ int BSearch(int arr[], int target) {
 
 */
 
-
 /*
 int BSearchRecursive(int arr[], int target, int low, int high) {
     if (low > high)
@@ -37,3 +36,4 @@ int BSearchRecursive(int arr[], int target, int low, int high) {
         return BSearchRecursive(arr, target, mid+1, high);
 }
 */
+////
