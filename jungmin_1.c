@@ -26,4 +26,3 @@ int main()
     scanf("%d", &x);
     dfs(0, 1);
 }
-//
