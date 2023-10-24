@@ -36,3 +36,5 @@ result = 1e9
 for candidate in candidates:
     result = min(result, get_sum(candidate))
 print(result)
+
+###
