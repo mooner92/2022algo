@@ -1,2 +1,3 @@
 a = int(input())
-print(pow(a,3))
+print(pow(a, 3))
+###
