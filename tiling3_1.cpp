@@ -20,4 +20,3 @@ int main()
         printf("%d : %lld\n", i, Tile(i));
     }
 }
-///////
