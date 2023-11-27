@@ -30,3 +30,4 @@ if __name__ == "__main__":
     # 결과 이미지 저장
     results.show(save_path=output_image_path)
     print(output_image_path)
+#####
