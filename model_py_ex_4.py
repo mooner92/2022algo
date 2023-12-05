@@ -26,5 +26,5 @@ subprocess.run(
     ]
 )
 
-od = od_address[26:-4]
-print(f"/home/mooner92/obok/deep_images{od}")
+od = od_address[36:-4]
+print(f"{od}")
