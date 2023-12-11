@@ -14,7 +14,7 @@ subprocess.run(
         "--img",
         "640",
         "--conf",
-        "0.01",
+        "0.6",
         "--source",
         od_address,
         "--save-conf",
@@ -28,3 +28,4 @@ subprocess.run(
 
 od = od_address[36:-4]
 print(f"{od}")
+###
