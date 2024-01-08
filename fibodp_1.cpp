@@ -36,4 +36,3 @@ int main()
         printf("%d항 : %d\n", i, fibodp(i));
     }
 }
-////
