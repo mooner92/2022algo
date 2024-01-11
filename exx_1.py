@@ -32,3 +32,4 @@ reverse_time, reverse_result = measure_time(do_sort, arr)
 print("두 번째 코드 실행 시간:", format(reverse_time, ".10f"))
 
 print("두 개의 코드의 결과가 동일한지 확인:", bubble_result == reverse_result)
+###
