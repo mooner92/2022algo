@@ -21,7 +21,4 @@ int main()
   return 0;
 }
 
-////
 // 출처: https://see-ro-e.tistory.com/21 [SeeRoE 프로그래밍 기록]
-
-////
