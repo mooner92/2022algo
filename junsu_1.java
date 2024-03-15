@@ -29,3 +29,4 @@ class B extends A {
         System.out.print("D");
     }
 }
+////
