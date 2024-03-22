@@ -23,4 +23,3 @@ int main() {
     }
     else printf("gosu");
 }*/
-///////
